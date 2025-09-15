@@ -1,3 +1,4 @@
+import Button from "./Button";
 
 const Cart = ({cartItem}) => {
     const totalSalary = cartItem.reduce(
@@ -19,6 +20,9 @@ const Cart = ({cartItem}) => {
                 )
                 }
             )}
+            </div>
+            <div className="mt-auto pt-3 flex justify-end">
+                    <Button color="default">Confirm List</Button>
             </div>
         </div>
     );
