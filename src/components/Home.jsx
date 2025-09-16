@@ -13,13 +13,7 @@ const Home = () => {
             .then(response => setCyberMaster(response.data))
             .catch(error => setErrors(error));
     },[])
-    // const addToCart= (id)=>{
-    //     const cartData = cyberMaster.filter((item)=> item.id === id)
-    //     const existsCartData = cartItem.filter((item)=> item.id !== id)
-    //     if (existsCartData){
-    //         setCartItem(...cartData)
-    //     }
-    // }
+   
    const addToCart = (id) => {
         const selectedItem = cyberMaster.find((item) => item.id === id);
         if (!selectedItem) return;
@@ -45,7 +39,7 @@ const Home = () => {
                     }   
                     
                 </div>
-                <div className="flex-1 bg-gray-100 rounded-md shadow-md">
+                <div className="flex-1 bg-gray-100 rounded-md shadow-md sticky top-5">
                     <Cart cartItem={cartItem} key={cartItem.id}/>
                 </div>
             </div>

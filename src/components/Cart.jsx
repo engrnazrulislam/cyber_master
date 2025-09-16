@@ -1,4 +1,3 @@
-import Button from "./Button";
 
 const Cart = ({cartItem}) => {
     const totalSalary = cartItem.reduce(
@@ -22,7 +21,7 @@ const Cart = ({cartItem}) => {
             )}
             </div>
             <div className="mt-auto pt-3 flex justify-end">
-                    <Button color="default">Confirm List</Button>
+                    <button className="px-2 py-2 bg-blue-600 text-white rounded-md shadow-md">Confirm List</button>
             </div>
         </div>
     );
